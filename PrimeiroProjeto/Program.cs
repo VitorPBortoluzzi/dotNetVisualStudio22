@@ -14,6 +14,23 @@
             soma = n1 + n2;
             Console.WriteLine("A variavel soma é igual a: "+soma);
 
+            var dt = new DateTime();
+            Console.WriteLine(dt);
+
+            Console.WriteLine("Dia = "+dt.Day);
+            Console.WriteLine("Mês = "+dt.Month);
+            Console.WriteLine("Ano = "+dt.Year);
+            Console.WriteLine("Hora = "+dt.Hour);
+            Console.WriteLine("Minuto = "+dt.Minute);
+            Console.WriteLine("DateTime agora: ");
+            dt = DateTime.Now;
+            Console.WriteLine("Dia = " + dt.Day);
+            Console.WriteLine("Mês = " + dt.Month);
+            Console.WriteLine("Ano = " + dt.Year);
+            Console.WriteLine("Hora = " + dt.Hour);
+            Console.WriteLine("Minuto = " + dt.Minute);
+            Console.WriteLine(dt.Day+"/"+dt.Month+"/"+dt.Year);
+            Console.WriteLine(dt);
         }
     }
 }
