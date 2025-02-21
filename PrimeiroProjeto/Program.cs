@@ -14,6 +14,7 @@
             int soma;
             soma = n1 + n2;
             Console.WriteLine("A variavel soma é igual a: "+soma);
+            //Teste Git hub Visual Studio 22
         }
     }
 }
