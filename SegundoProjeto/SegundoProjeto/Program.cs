@@ -24,7 +24,7 @@
             Console.WriteLine("i = : "+i);
             i = i + 1;
             Console.WriteLine("i = : " + i);
-            i = i++;
+            i++;
             Console.WriteLine("i = : " + i);
             i += 1;
             Console.WriteLine("i = : " + i);
