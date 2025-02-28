@@ -4,6 +4,7 @@
     {
         static void Main(string[] args)
         {
+            /*
             double n1, n2, n3, media, somaMedia;
             Console.WriteLine("Atribuindo 3 notas para o aluno!");
             n1 = 7.5;
@@ -35,6 +36,7 @@
 
             Console.Write("Aqui eu n quebro linha!! ");
             Console.Write("Aqui eu n quebro linha, mas me quebram a linha 2x!! \n \n");
+            */
 
             Console.WriteLine("Manipulação de Strings: ");
             string frase = "Frase de declaração de variavel string";
@@ -46,7 +48,30 @@
 
             Console.WriteLine("Interpolando Strings");
             Console.WriteLine($"frase 1 = {frase}");
-            Console.WriteLine($"frase 2 = {frase2}");
+            Console.WriteLine($"frase 2 = {frase2}" + "\n \n");
+
+            string maiuscula = "frase em minusculo";
+            Console.WriteLine("ToUppercase: " + maiuscula.ToUpper());
+
+            string minuscula = "FRASE EM MAIUSCULO";
+            Console.WriteLine("ToLower: " + minuscula.ToLower());
+
+            string fraseNova = frase.Replace("Frase", "string");
+            Console.WriteLine("Frase Nova: " + fraseNova);
+
+            string uniao;
+            uniao = maiuscula + " " + minuscula;
+            Console.WriteLine("A união de frases é: " + uniao);
+
+            int numero;
+            Console.WriteLine("Digite um valor: ");
+            numero = int.Parse(Console.ReadLine());
+            Console.WriteLine("O numero digitado é: " + numero);
+
+            double numero2;
+            Console.WriteLine("Agora, um valor com virgula: ");
+            numero2 = double.Parse(Console.ReadLine());
+            Console.WriteLine("Foi digitado: ");
         }
     }
 }
