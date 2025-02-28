@@ -18,6 +18,20 @@
             Console.WriteLine("Média do aluno: " + media);
             Console.WriteLine("Média do aluno m2: " + somaMedia / 3);
             Console.WriteLine("Média Arredondada: " + media.ToString("n2"));
-        }
+
+            int i;
+            i = 0;
+            Console.WriteLine("i = : "+i);
+            i = i + 1;
+            Console.WriteLine("i = : " + i);
+            i = i++;
+            Console.WriteLine("i = : " + i);
+            i += 1;
+            Console.WriteLine("i = : " + i);
+            i += 2;
+            Console.WriteLine("i = : " + i);
+            i = i + 3;
+            Console.WriteLine("i = : " + i);
+        }   
     }
 }
