@@ -26,7 +26,11 @@
             for (int i = 0; i < 10; i++)
             {
                 Console.WriteLine("i vale " + i);
-                if (i == 7) break;
+                if (i == 7)
+                {
+                    Console.WriteLine("Encerrando Laço");
+                    break;
+                }
             }
 
             for (int i = 10; i > 0; i--)
