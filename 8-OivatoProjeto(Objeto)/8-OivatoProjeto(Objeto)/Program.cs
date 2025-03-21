@@ -61,15 +61,24 @@
 
             //Console.WriteLine("Carro: c2( " + c2.marca + " ; " + c2.modelo + " ; " + c2.anoFabricado + ";)\n");
 
-            Livreo l1 = new Livreo();
-            Livreo l2 = new Livreo();
-            Livreo l3 = new Livreo();
+            //Livro l1 = new Livro();
+            //Livro l2 = new Livro();
+            //Livro l3 = new Livro();
 
-            Console.WriteLine(" " + l1.titulo + l1.autor + l1.anoPublic);
-            Console.WriteLine(" " + l2.titulo + l2.autor + l2.anoPublic);
-            Console.WriteLine(" " + l3.titulo + l3.autor + l3.anoPublic);
+            //Console.WriteLine(" " + l1.titulo + l1.autor + l1.anoPublic);
+            //Console.WriteLine(" " + l2.titulo + l2.autor + l2.anoPublic);
+            //Console.WriteLine(" " + l3.titulo + l3.autor + l3.anoPublic);
 
+            Jogo j1 = new Jogo();
 
+            Console.WriteLine("Digite o Titulo");
+            j1.titulo = Console.ReadLine();
+            Console.WriteLine("Digite o Gênero");
+            j1.genero = Console.ReadLine();
+            Console.WriteLine("Digite a Plataforma");
+            j1.plataforma = Console.ReadLine();
+            Console.WriteLine("Digite o ano de Lançamento");
+            j1.anoLancamento = int.Parse(Console.ReadLine());
         }
     }
 }
