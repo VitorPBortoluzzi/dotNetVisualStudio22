@@ -4,6 +4,8 @@
     {
         static void Main(string[] args)
         {
+            List<Personagem> personagens = new List<Personagem>();
+
             Console.WriteLine("Digite o nome do seu personagem: ");
             string nomePersonagem = Console.ReadLine();
 
@@ -17,9 +19,10 @@
             Console.Write("Intelecto: ");
             int intelecto = int.Parse(Console.ReadLine());
 
-            Personagem p = new Personagem(nomePersonagem, hp, forca, agilidade, intelecto);
-            Console.WriteLine($"Personagem '{p.Nome}' criado na posição (0,0) com os seguintes atributos:");
-            p.MostrarAtributos();
+            Personagem novoPersonagem = new Personagem(nomePersonagem, hp, forca, agilidade, intelecto);
+            personagens.Add(novoPersonagem);
+            Console.WriteLine($"Personagem '{novoPersonagem.Nome}' criado na posição (0,0) com os seguintes atributos:");
+            novoPersonagem.MostrarAtributos();
 
             while (true)
             {
