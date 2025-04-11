@@ -8,25 +8,25 @@ namespace _10_ClassAbstrata.Atv2
 {
     internal class Program
     {
-        static void Main(string[] args)
-        {
-            Carro carro = new Carro()
-            {
-                Marca = "Wolksvagem",
-                Modelo = "BMW",
-                Portas = 4
+        //static void Main(string[] args)
+        //{
+        //    Carro carro = new Carro()
+        //    {
+        //        Marca = "Wolksvagem",
+        //        Modelo = "BMW",
+        //        Portas = 4
 
-            };
+        //    };
 
-            Moto moto = new Moto()
-            {
-                Marca = "Harley",
-                Modelo = "X",
-                Cilindradas = 250
-            };
+        //    Moto moto = new Moto()
+        //    {
+        //        Marca = "Harley",
+        //        Modelo = "X",
+        //        Cilindradas = 250
+        //    };
 
-            moto.Dirigir();
-            carro.Dirigir();
-        }
+        //    moto.Dirigir();
+        //    carro.Dirigir();
+        //}
     }
 }
