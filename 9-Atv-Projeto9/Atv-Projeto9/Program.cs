@@ -11,6 +11,7 @@
 
             String nome;
             int matricula, idade, semestre;
+            char sexo;
 
             Console.WriteLine("Digite o nome do Aluno:");
             nome = Console.ReadLine();
@@ -24,7 +25,10 @@
             Console.WriteLine("Digite a semestre do Aluno");
             semestre = int.Parse(Console.ReadLine());
 
-            Aluno al = new Aluno(nome, matricula, idade, semestre);
+            Console.WriteLine("Digite o caracter correspondente ao sexo do aluno (M - masculino | F - Feminino)");
+            sexo = char.Parse(Console.ReadLine());
+
+            Aluno al = new Aluno(nome, matricula, idade, semestre, sexo);
 
             al.dadosAluno();
 
@@ -57,10 +61,6 @@
             livro.emprestar();
             livro.devolver();
             livro.devolver();
-
-            Console.WriteLine("-------------");
-
-            Console.WriteLine("3)");
         }
     }
 }

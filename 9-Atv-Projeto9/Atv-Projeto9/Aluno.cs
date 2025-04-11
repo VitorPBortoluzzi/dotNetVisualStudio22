@@ -36,4 +36,5 @@ namespace Atv_Projeto9
             Console.WriteLine("sexo:" + sexo);
             Console.WriteLine("----------------------");
         }
+    }
 }
