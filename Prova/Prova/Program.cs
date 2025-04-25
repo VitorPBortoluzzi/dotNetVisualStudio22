@@ -31,6 +31,7 @@
                     Chamadosoftware chamadosoftware = new Chamadosoftware(titulo, descricao);
                     Console.WriteLine("Atendimento de Software");
                     chamadosoftware.Exibir();
+                    chamadosoftware.Executar();
                     break;
                 }
                 else Console.WriteLine("Opção inválida");

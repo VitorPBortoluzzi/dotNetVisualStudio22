@@ -10,9 +10,12 @@ namespace Prova
     {
         public Chamadosoftware(string Titulo, string Descricao) : base(Titulo, Descricao)
         {
+            /*
+            Desnecessário já que está herdando de Chamado todo o construtor e se refere a valores do construtor de chamado
             this.Titulo = Titulo;
             this.Descricao = Descricao;
             Executar();
+             */
         }
 
         public override void Executar()
