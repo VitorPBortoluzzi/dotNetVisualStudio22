@@ -1,0 +1,11 @@
+﻿@page
+@model WebAplication.Pages.ProdutoModel
+@{
+    ViewData["Title"] = "Cadastro de Produtos";
+    ViewData["Teste"] = "Estou aqui testando esta forma de dados";
+}
+<h2>@ViewData["Title"]</h2>
+<h2>@ViewData["Teste"]</h2>
+<p>Estrou testando os dados da minha página</p>
+<p>Nome do produto: @Model.Descricao</p>
+<p>Preço: @Model.Preco</p>
