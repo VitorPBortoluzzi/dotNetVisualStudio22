@@ -1,0 +1,36 @@
+﻿@page
+@model Web_Car.Pages.Veiculos.CriarModel
+@{
+    ViewData["Title"] = "Criar Veiculo";
+}
+<form method="post">
+    <div>
+        <label asp-for="v.Id">ID</label>
+        <input asp-for="v.Id" type="text"  class="form-control" />
+    </div>
+    <div>
+        <label asp-for="v.Name">Nome</label>
+        <input asp-for="v.Name" type="text" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="v.Modelo">Modelo</label>
+        <input asp-for="v.Modelo" type="text" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="v.Marca">Marca</label>
+        <input asp-for="v.Marca" type="text" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="v.Renavam">Renavam</label>
+        <input asp-for="v.Renavam" type="text" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="v.AnoFabric">Ano Fabricação</label>
+        <input asp-for="v.AnoFabric" type="text" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="v.Id">ID</label>
+        <input asp-for="v.Id" type="text" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Criar</button>
+</form>
