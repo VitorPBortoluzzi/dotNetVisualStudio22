@@ -1,0 +1,21 @@
+﻿@page
+@model ExemploAula.Pages.Produtos.CriarModel
+@{
+    ViewData["Title"] = "Criar Produto";
+}
+<form method="post">
+    <div>
+        <label asp-for="p.Id">ID</label>
+        <input asp-for="p.Id" type="text"  class="form-control" />
+    </div>
+    <div>
+        <label asp-for="p.Descricao">Descrição</label>
+        <input asp-for="p.Descricao" class="form-control" />
+        <span asp-validation-for="p.Descricao" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="p.Preco">Preço</label>
+        <input asp-for="p.Preco" type="number" step="0.01" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Criar</button>
+</form>
