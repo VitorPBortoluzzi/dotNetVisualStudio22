@@ -1,4 +1,4 @@
-using Web_Car.Models
+using Web_Car.Models;
 using System.Text;
 
 namespace Web_car.Services

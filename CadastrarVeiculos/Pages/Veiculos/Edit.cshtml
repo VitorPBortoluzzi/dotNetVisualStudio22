@@ -1,0 +1,53 @@
+﻿@page
+@model CadastrarVeiculos.Pages.Veiculos.EditModel
+@{
+    ViewData["Title"] = "Editar Veículo";
+}
+
+<h2>Editar Veículo</h2>
+
+@if (Model.Veiculo == null)
+{
+    <div class="alert alert-danger">Veículo não encontrado.</div>
+}
+else
+{
+    <form method="post" enctype="multipart/form-data">
+        <input type="hidden" asp-for="Veiculo.Renavam" />
+
+        <div class="form-group">
+            <label>Nome</label>
+            <input asp-for="Veiculo.Nome" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Modelo</label>
+            <input asp-for="Veiculo.Modelo" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Marca</label>
+            <input asp-for="Veiculo.Marca" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Ano de Fabricação</label>
+            <input asp-for="Veiculo.AnoFabricacao" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Ano do Modelo</label>
+            <input asp-for="Veiculo.AnoModelo" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Foto nova (opcional)</label>
+            <input asp-for="FotoUpload" type="file" class="form-control" />
+        </div>
+        @if (!string.IsNullOrEmpty(Model.Veiculo.FotoPath))
+        {
+            <div class="mb-3">
+                <strong>Foto atual:</strong><br />
+                <img src="@Model.Veiculo.FotoPath" width="200" />
+            </div>
+        }
+        <br />
+        <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+        <a asp-page="Index" class="btn btn-secondary">Cancelar</a>
+    </form>
+}

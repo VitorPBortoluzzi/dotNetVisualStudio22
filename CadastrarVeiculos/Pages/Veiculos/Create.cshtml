@@ -1,0 +1,41 @@
+﻿@page
+@model CadastrarVeiculos.Pages.Veiculos.CreateModel
+@{
+    ViewData["Title"] = "Cadastro de Veículo";
+}
+
+<h2>Cadastro de Veículo</h2>
+
+<form method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label>Nome</label>
+        <input asp-for="Veiculo.Nome" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Modelo</label>
+        <input asp-for="Veiculo.Modelo" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Marca</label>
+        <input asp-for="Veiculo.Marca" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Renavam</label>
+        <input asp-for="Veiculo.Renavam" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Ano de Fabricação</label>
+        <input asp-for="Veiculo.AnoFabricacao" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Ano do Modelo</label>
+        <input asp-for="Veiculo.AnoModelo" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Foto (opcional)</label>
+        <input asp-for="FotoUpload" type="file" class="form-control" />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Salvar</button>
+    <a asp-page="./Index" class="btn btn-secondary">Voltar</a>
+</form>
