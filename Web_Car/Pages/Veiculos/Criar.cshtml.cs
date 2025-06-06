@@ -1,31 +1,32 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Web_Car.Models;
+using Web_car.Services;
 
 namespace Web_Car.Pages.Veiculos
 {
-    public class CriarModel : PageModel
+    public class CreateModel : PageModel
     {
-        [BindProperty]
-        public Veiculo v { get; set; }
-        public void OnGet()
-        {
-        }
+        [BindProperty] public Veiculo Veiculo { get; set; }
+        [BindProperty] public IFormFile? Foto { get; set; }
 
-        public IActionResult OnPost()
+        public void OnGet() { }
+
+        public async Task<IActionResult> OnPostAsync()
         {
-            if (!ModelState.IsValid)
+            if (Foto != null)
             {
-                return Page();
-            }
-            else
-            {
-                using (var writer = new StreamWriter("veiculos.txt", true))
-                {
-                    writer.WriteLine(v.Id + ";" + v.Name + ";" + v.Modelo + ";" + v.Marca + ";" + v.Renavam + ";" + v.AnoFabric + ";" + v.AnoModelo);
+                var fileName = Path.GetFileName(Foto.FileName);
+                var filePath = Path.Combine("wwwroot/uploads", fileName);
+                using (var stream = new FileStream(filePath, FileMode.Create)){
+                    await Foto.CopyToAsync(stream);
                 }
-                return RedirectToPage("/Veiculos/Index");
+                
+                Veiculo.FotoPath = "/uploads/" + fileName;
             }
+
+            new VeiculoService().Add(Veiculo);
+            return RedirectToPage("Index");
         }
     }
 }

@@ -1,0 +1,15 @@
+@page "{id:int}"
+@model Web_Car.Pages.Veiculos.DeleteModel
+@{
+    ViewData["Title"] = "Excluir Veículo";
+}
+
+<h2>Excluir Veículo</h2>
+
+<p>Tem certeza que deseja excluir o veículo <strong>@Model.Veiculo.Nome</strong>?</p>
+
+<form method="post">
+    <input type="hidden" asp-for="Veiculo.Id" />
+    <button type="submit">Confirmar Exclusão</button>
+    <a asp-page="Index">Cancelar</a>
+</form>

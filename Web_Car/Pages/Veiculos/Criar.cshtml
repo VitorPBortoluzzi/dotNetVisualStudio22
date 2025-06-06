@@ -1,36 +1,38 @@
 ﻿@page
 @model Web_Car.Pages.Veiculos.CriarModel
 @{
-    ViewData["Title"] = "Criar Veiculo";
+    ViewData["Title"] = "Cadastrar Veículo";
 }
-<form method="post">
+<h2>Cadastrar Veículo</h2>
+<form method="post" enctype="multipart/form-data">
     <div>
-        <label asp-for="v.Id">ID</label>
-        <input asp-for="v.Id" type="text"  class="form-control" />
+        <label>Nome:</label>
+        <input asp-for="Veiculo.Nome" />
     </div>
     <div>
-        <label asp-for="v.Name">Nome</label>
-        <input asp-for="v.Name" type="text" class="form-control" />
+        <label>Modelo:</label>
+        <input asp-for="Veiculo.Modelo" />
     </div>
     <div>
-        <label asp-for="v.Modelo">Modelo</label>
-        <input asp-for="v.Modelo" type="text" class="form-control" />
+        <label>Marca:</label>
+        <input asp-for="Veiculo.Marca" />
     </div>
     <div>
-        <label asp-for="v.Marca">Marca</label>
-        <input asp-for="v.Marca" type="text" class="form-control" />
+        <label>Renavam:</label>
+        <input asp-for="Veiculo.Renavam" />
     </div>
     <div>
-        <label asp-for="v.Renavam">Renavam</label>
-        <input asp-for="v.Renavam" type="text" class="form-control" />
+        <label>Ano Fabricação:</label>
+        <input asp-for="Veiculo.AnoFabricacao" />
     </div>
     <div>
-        <label asp-for="v.AnoFabric">Ano Fabricação</label>
-        <input asp-for="v.AnoFabric" type="text" class="form-control" />
+        <label>Ano Modelo:</label>
+        <input asp-for="Veiculo.AnoModelo" />
     </div>
     <div>
-        <label asp-for="v.Id">ID</label>
-        <input asp-for="v.Id" type="text" class="form-control" />
+        <label>Foto (opcional):</label>
+        <input type="file" name="Foto" />
     </div>
-    <button type="submit" class="btn btn-primary">Criar</button>
+    <button type="submit">Salvar</button>
 </form>
+<a asp-page="Index">Voltar</a>
