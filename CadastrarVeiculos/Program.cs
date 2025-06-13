@@ -20,6 +20,12 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+
+// Redireciona a home "/" para "/Veiculos"
+app.MapGet("/", context => {
+    context.Response.Redirect("/Veiculos");
+    return Task.CompletedTask;
+});
 app.MapRazorPages();
 
 app.Run();
