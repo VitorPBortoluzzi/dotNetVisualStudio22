@@ -1,0 +1,37 @@
+﻿@page
+@model Web_Car.Pages.Veiculos.IndexModel
+@{
+    ViewData["Title"] = "Lista de Veículos";
+}
+
+<h2>Lista de Veículos</h2>
+
+<a asp-page="Create">Cadastrar Novo Veículo</a>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Modelo</th>
+            <th>Marca</th>
+            <th>Ano</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var veiculo in Model.Veiculos)
+        {
+            <tr>
+                <td>@veiculo.Nome</td>
+                <td>@veiculo.Modelo</td>
+                <td>@veiculo.Marca</td>
+                <td>@veiculo.AnoModelo</td>
+                <td>
+                    <a asp-page="Details" asp-route-id="@veiculo.Id">Detalhes</a> |
+                    <a asp-page="Edit" asp-route-id="@veiculo.Id">Editar</a> |
+                    <a asp-page="Delete" asp-route-id="@veiculo.Id">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
